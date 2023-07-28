@@ -9,7 +9,7 @@ function App() {
   useEffect(() =>{
     console.log('this is called once refresh page. ')
     const storedTodos = JSON.parse(localStorage.getItem('todos'));
-    if(storedTodos.length > 0){
+    if(storedTodos && storedTodos.length > 0){
       setTodos(storedTodos);
     }
   }, []); // this is called once refresh page. 
